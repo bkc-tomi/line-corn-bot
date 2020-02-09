@@ -26,9 +26,9 @@ y5NIctWXk5T2w3+eMc81ZsCRx8040IgdB04t89/1O/w1cDnyilFU=")
 
 handler = WebhookHandler("63b40d26ce6fd97fdcb3756e21186a12")
 
-SRC_IMAGE_PATH = "/Users/matsumuratomiakira/Documents/cornvenv/{}_src.jpg"
-MAIN_IMAGE_PATH = "/Users/matsumuratomiakira/Documents/cornvenv/{}_main.jpg"
-PREVIEW_IMAGE_PATH = "/Users/matsumuratomiakira/Documents/cornvenv/{}_preview.jpg"
+SRC_IMAGE_PATH = os.getcwd() + "/{}_src.jpg"
+MAIN_IMAGE_PATH = os.getcwd() + "/{}_main.jpg"
+PREVIEW_IMAGE_PATH = os.getcwd() + "/{}_preview.jpg"
 
 
 @app.route("/callback", methods=["POST"])
