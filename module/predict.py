@@ -24,7 +24,7 @@ def predict_corn(image_path):
     image = [crop_resize(image_path)]
     image = np.asarray(image)
     
-    model_path = os.getcwd() + "/corn_model_file.hdf5"
+    model_path = os.getcwd() + "/module/corn_model_file.hdf5"
     #load model
     model = load_model(model_path)
     image_shape = (32, 32, 3)
