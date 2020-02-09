@@ -64,13 +64,11 @@ def handle_image(event):
     # 画像の加工、保存
     print(src_image_path)
     print(str(src_image_path))
-    """
     try:
         msg = predict_corn(str(src_image_path))
     except:
         msg = "‪ごめん、エラーが出たみたい。"
-    """
-    msg = predict_corn(str(src_image_path))
+
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=msg))
 
     # 画像を削除する
