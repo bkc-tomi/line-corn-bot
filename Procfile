@@ -1,0 +1,1 @@
+web: gunicorn corn_bot:app --log-file=-
