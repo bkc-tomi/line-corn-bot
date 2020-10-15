@@ -17,14 +17,12 @@ from pathlib import Path
 
 sys.path.append(os.getcwd() + "/module")
 from predict import predict_corn
-
+import setting
 
 app = Flask(__name__)
-line_bot_api = LineBotApi("CrHpg+og8J+/2FoLvlslEosmuMASGBix3ybhzOf2dIllvD6MBoI\
-QbTlUwLfvs865BgQWrcCNHAIeYDxZAhVJ9p293V6UgOfVnTVeaDdN7n29zw6BnLfdSnW\
-y5NIctWXk5T2w3+eMc81ZsCRx8040IgdB04t89/1O/w1cDnyilFU=")
+line_bot_api = LineBotApi(setting.LBA)
 
-handler = WebhookHandler("63b40d26ce6fd97fdcb3756e21186a12")
+handler = WebhookHandler(setting.HANDLER)
 
 SRC_IMAGE_PATH = os.getcwd() + "/{}_src.jpg"
 MAIN_IMAGE_PATH = os.getcwd() + "/{}_main.jpg"
